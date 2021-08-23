@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light mb-5">
+<div class="container-fluid">
+<a class="navbar-brand">Navbar</a>
+<div class="d-flex">
+<% if user_signed_in? %>
+<div class="badge bg-primary text-wrap" style="width: 6rem;">
+<%= current_user.username %>
+</div>
+<%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-success mx-3" %>
+<% else %>
+<%= link_to "Login",    new_user_session_path, class: "btn btn-outline-success mx-3" %>
+<%= link_to "Register", new_user_registration_path, class: "btn btn-outline-success" %>
+<% end %>
+</div>
+</div>
+</nav>

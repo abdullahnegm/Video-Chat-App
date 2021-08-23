@@ -1,0 +1,10 @@
+<div class="card m-3" style="width: 25%; display: inline-block;">
+<% if user.image.attached? %>
+<%= image_tag(user.image, height: '300', width: '323') %>
+<% end %>
+<div class="card-body text-center">
+<h5 class="card-title"><%= user.username %></h5>
+<p class="card-text"><%= user.email %></p>
+<button data-username="<%= user.username %>" data-id="<%= user.id %>" class="btn btn-primary call-button">Call</button>
+</div>
+</div>

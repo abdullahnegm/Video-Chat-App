@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Chat App</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<div class="container text-center" >
+<div>
+<%= render 'home/partials/sender_notif' %>
+<%= render 'home/partials/receiver_notif' %>
+<%= render 'home/partials/session' %>
+<br />
+<br />
+<%= yield %>
+</div>
+</div>
+<script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+</body>
+</html>
